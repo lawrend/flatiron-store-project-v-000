@@ -6,11 +6,20 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"></link>
 </head>
 <body>
+  <%= render 'layouts/header' %>
+  <div class="container">
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+  </div>
 
-<%= render 'layouts/header' %>
-<%= yield %>
+  <div class="container">
+    <div class="jumbotron">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>
