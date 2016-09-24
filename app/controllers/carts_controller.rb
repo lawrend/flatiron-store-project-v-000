@@ -11,7 +11,6 @@ class CartsController < ApplicationController
 		end
 		@line_items = @current_cart.line_items
 		@total = @current_cart.total
-		@status = @current_cart.status
 	end
 
 	def checkout
